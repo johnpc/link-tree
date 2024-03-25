@@ -1,0 +1,26 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import Avatar from "@components/Avatar.astro";
+import LinksLayout from "@layouts/LinksLayout.astro";
+import Link from "@components/Link.astro";
+import Social from "@components/Social.astro";
+const links = await Astro.glob("./links/*.md");
+---
+
+<MainLayout title="Astro LinkTree Clone">
+  <Avatar />
+  <LinksLayout>
+    {
+      links.map((link) => {
+        return (
+          <Link
+            linkTitle={link.frontmatter.linkTitle}
+            linkDescription={link.frontmatter.linkDescription}
+            linkUrl={link.frontmatter.linkURL}
+          />
+        );
+      })
+    }
+  </LinksLayout>
+  <Social />
+</MainLayout>
