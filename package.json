@@ -34,6 +34,7 @@
       "prettier --write",
       "eslint --cache --fix"
     ],
+    "*.astro": "prettier --write",
     "*.json": "prettier --write",
     "*.yml": "prettier --write",
     "*.md": "prettier --write"

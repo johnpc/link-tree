@@ -1,5 +1,5 @@
 ---
 linkTitle: "s.jpc"
-linkDescription: "(shoten links)"
+linkDescription: "(shorten links)"
 linkURL: "https://s.jpc.io"
 ---
