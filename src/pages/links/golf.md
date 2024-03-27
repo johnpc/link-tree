@@ -1,5 +1,5 @@
 ---
 linkTitle: "golf.jpc"
 linkDescription: "(join my golf league)"
-linkURL: "https://golfa2.com"
+linkURL: "https://golf.jpc.io"
 ---
