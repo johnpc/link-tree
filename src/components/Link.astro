@@ -1,5 +1,8 @@
 ---
-const { linkTitle, linkDescription, linkUrl } = Astro.props;
+import iosPng from "@assets/ios.png";
+import androidPng from "@assets/android.png";
+import webPng from "@assets/web.png";
+const { linkTitle, linkDescription, linkUrl, web, ios, android } = Astro.props;
 ---
 
 <div class="flex flex-col items-center w-full gap-y-8">
@@ -8,9 +11,47 @@ const { linkTitle, linkDescription, linkUrl } = Astro.props;
   >
     <a href={linkUrl}
       ><button
-        ><div class="font-semibold">{linkTitle}{" "}</div>{
-          linkDescription
-        }</button
+        ><div class="font-semibold">
+          {linkTitle}{" "}{
+            android ? (
+              <>
+                <img
+                  style={{ display: "inline", width: "20px" }}
+                  src={androidPng.src}
+                  alt="androidPng"
+                />
+                {"  "}
+              </>
+            ) : (
+              ""
+            )
+          }{
+            ios ? (
+              <>
+                <img
+                  style={{ display: "inline", width: "20px" }}
+                  src={iosPng.src}
+                  alt="iosPng"
+                />
+                {"  "}
+              </>
+            ) : (
+              ""
+            )
+          }{
+            web ? (
+              <>
+                {/* <img
+                  style={{ display: "inline", width: "20px" }}
+                  src={webPng.src}
+                  alt="webPng"
+                />{"  "} */}
+              </>
+            ) : (
+              ""
+            )
+          }
+        </div>{linkDescription}</button
       >
     </a>
   </div>

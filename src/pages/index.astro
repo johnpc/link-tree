@@ -7,7 +7,7 @@ import Social from "@components/Social.astro";
 const links = await Astro.glob("./links/*.md");
 ---
 
-<MainLayout title="jpc links">
+<MainLayout title="jpc.links">
   <Avatar />
   <LinksLayout>
     {
@@ -17,14 +17,17 @@ const links = await Astro.glob("./links/*.md");
             linkTitle={link.frontmatter.linkTitle}
             linkDescription={link.frontmatter.linkDescription}
             linkUrl={link.frontmatter.linkURL}
+            web={link.frontmatter.web}
+            ios={link.frontmatter.ios}
+            android={link.frontmatter.android}
           />
         );
       })
     }
   </LinksLayout>
   <div style={{ color: "white" }}>
-    I self-host freshrss, jellyfin, navidrome, immich, libreddit, and invidious
-    instances. Contact me if you'd like access.
+    I self-host freshrss, jellyfin, navidrome, audiobookshelf, calibre-web,
+    immich, libreddit, and invidious instances. Contact me if you'd like access.
   </div>
   <Social />
 </MainLayout>
