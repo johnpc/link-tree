@@ -1,4 +1,13 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Check for peer dependency conflicts
+if git diff --cached --name-only | grep -q "package.json\|package-lock.json"; then
+  echo "Checking for peer dependency conflicts..."
+  if ! npm ls >/dev/null 2>&1; then
+    echo "❌ Peer dependency conflicts detected. Run 'npm ls' to see details."
+    exit 1
+  fi
+fi
+
 npx lint-staged
