@@ -21,12 +21,12 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
     "@typescript-eslint/parser": "^8.51.0",
     "eslint": "^9.39.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.2.5",
+    "prettier": "^3.8.0",
     "prettier-plugin-astro": "^0.14.1"
   },
   "lint-staged": {
